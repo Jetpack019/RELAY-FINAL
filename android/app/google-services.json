@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "302225887124",
+    "project_id": "relayfinal-8786a",
+    "storage_bucket": "relayfinal-8786a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:302225887124:android:952fbc53c4a4e9dbc98981",
+        "android_client_info": {
+          "package_name": "com.example.relay_finalize"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "302225887124-dro76778v237ttpf7ffh4rrosi4vktj2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.relay_finalize",
+            "certificate_hash": "f701ec77ef6d4a6345333a9e0d199c1ca8a3f8d3"
+          }
+        },
+        {
+          "client_id": "302225887124-ipt3ciaocl3v4tkutf30gkkff5pj241o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4OJy0zmYZJMFuxL65KPN5CMWpw1f6h7Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "302225887124-ipt3ciaocl3v4tkutf30gkkff5pj241o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
