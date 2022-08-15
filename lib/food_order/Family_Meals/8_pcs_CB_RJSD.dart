@@ -882,11 +882,7 @@ class _CB_RJSD_8pState extends State<CB_RJSD_8p> {
                   child: SizedBox(
                     child: MaterialButton(
                       onPressed: () async {
-                        if (chicken_flavor_name == 'Chicken Flavor' ||
-                            drinks_name == 'Choice of Drinks' ||
-                            extra_name_1 == 'Extra Rice' ||
-                            extra_name_2 == 'Extra Chicken Joy Gravy' ||
-                            total_adds == 902) {
+                        if (total_adds == 0) {
                           Fluttertoast.showToast(
                               msg: "Choose your order before you proceed");
                         } else {

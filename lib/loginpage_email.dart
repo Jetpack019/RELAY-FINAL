@@ -48,7 +48,7 @@ class _LogInPage_EmailState extends State<LogInPage_Email> {
                     shape: BoxShape.circle,
                   ),
                   child: Image.network(
-                    'https://picsum.photos/seed/138/600',
+                    'https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=740&t=st=1660381010~exp=1660381610~hmac=c8d393db78441f4414905a9f907d62c681ad55c19d10b3202a1ccfb17b786954',
                   ),
                 ),
                 SizedBox(height: 10),
@@ -56,12 +56,13 @@ class _LogInPage_EmailState extends State<LogInPage_Email> {
                 SizedBox(height: 10),
                 Text(data['email']),
                 SizedBox(height: 10),
-                Text(data['uid']),
+
                 SizedBox(height: 30),
 
                 //logout
                 ActionChip(
-                    avatar: Icon(Icons.forward),
+                    backgroundColor: Colors.amber,
+                    avatar: Icon(Icons.logout),
                     label: Text("Change User"),
                     onPressed: () {
                       stream:
@@ -75,7 +76,8 @@ class _LogInPage_EmailState extends State<LogInPage_Email> {
 
                 SizedBox(height: 20),
                 ActionChip(
-                    avatar: Icon(Icons.logout),
+                    backgroundColor: Colors.amber,
+                    avatar: Icon(Icons.forward),
                     label: Text("Lets Proceed"),
                     onPressed: () {
                       Username_Login_username = data['username'];

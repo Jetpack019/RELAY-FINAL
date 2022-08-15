@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:relay_finalize/screens/SeeMore/seeMore_Desserts/sweetDesserts.dart';
+import 'package:relay_finalize/screens/SeeMore/seeMore_ElectricalVehicle/electricalvehicles_seemore.dart';
+import 'package:relay_finalize/screens/SeeMore/seeMore_Restaurant/restaurants_seemore.dart';
+import 'package:relay_finalize/screens/SeeMore/seeMore_StandardVehicle/standardvehicles_seemore.dart';
 
 import '../../data/car_rent_data.dart';
 import '../../data/res_data.dart';
 import '../../route_car_rent/route_car_rent.dart';
-import '../../route_restaurant/route_restaurant.dart';
+import '../../route_food_delivery/route_food_delivery.dart';
 
 class FoodandCarScreen extends StatefulWidget {
   FoodandCarScreen({Key? key}) : super(key: key);
@@ -90,13 +94,22 @@ class _FoodandCarScreenState extends State<FoodandCarScreen> {
                                       fontWeight: FontWeight.w500)),
                             ),
                           ),
-                          Container(
-                            margin: const EdgeInsets.all(15.0),
-                            padding: const EdgeInsets.all(3.0),
-                            decoration: BoxDecoration(
-                                border: Border.all(
-                                    color: Color.fromARGB(255, 0, 0, 0))),
-                            child: Text('See More'),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => SeeMoreRestaurants()),
+                              );
+                            },
+                            child: Container(
+                              margin: const EdgeInsets.all(15.0),
+                              padding: const EdgeInsets.all(3.0),
+                              decoration: BoxDecoration(
+                                  border: Border.all(
+                                      color: Color.fromARGB(255, 0, 0, 0))),
+                              child: Text('See More'),
+                            ),
                           )
                         ],
                       ),
@@ -208,13 +221,23 @@ class _FoodandCarScreenState extends State<FoodandCarScreen> {
                                         fontWeight: FontWeight.w500)),
                               ),
                             ),
-                            Container(
-                              margin: const EdgeInsets.all(15.0),
-                              padding: const EdgeInsets.all(3.0),
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                      color: Color.fromARGB(255, 0, 0, 0))),
-                              child: Text('See More'),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          SeeMoreSweetDesserts()),
+                                );
+                              },
+                              child: Container(
+                                margin: const EdgeInsets.all(15.0),
+                                padding: const EdgeInsets.all(3.0),
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                        color: Color.fromARGB(255, 0, 0, 0))),
+                                child: Text('See More'),
+                              ),
                             )
                           ],
                         ),
@@ -350,13 +373,23 @@ class _FoodandCarScreenState extends State<FoodandCarScreen> {
                                       fontWeight: FontWeight.w500)),
                             ),
                           ),
-                          Container(
-                            margin: const EdgeInsets.all(15.0),
-                            padding: const EdgeInsets.all(3.0),
-                            decoration: BoxDecoration(
-                                border: Border.all(
-                                    color: Color.fromARGB(255, 0, 0, 0))),
-                            child: Text('See More'),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        SeeMoreElectricalVehicles()),
+                              );
+                            },
+                            child: Container(
+                              margin: const EdgeInsets.all(15.0),
+                              padding: const EdgeInsets.all(3.0),
+                              decoration: BoxDecoration(
+                                  border: Border.all(
+                                      color: Color.fromARGB(255, 0, 0, 0))),
+                              child: Text('See More'),
+                            ),
                           )
                         ],
                       ),
@@ -445,13 +478,23 @@ class _FoodandCarScreenState extends State<FoodandCarScreen> {
                                       fontWeight: FontWeight.w500)),
                             ),
                           ),
-                          Container(
-                            margin: const EdgeInsets.all(15.0),
-                            padding: const EdgeInsets.all(3.0),
-                            decoration: BoxDecoration(
-                                border: Border.all(
-                                    color: Color.fromARGB(255, 0, 0, 0))),
-                            child: Text('See More'),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        SeeMoreStandardVehicles()),
+                              );
+                            },
+                            child: Container(
+                              margin: const EdgeInsets.all(15.0),
+                              padding: const EdgeInsets.all(3.0),
+                              decoration: BoxDecoration(
+                                  border: Border.all(
+                                      color: Color.fromARGB(255, 0, 0, 0))),
+                              child: Text('See More'),
+                            ),
                           )
                         ],
                       ),

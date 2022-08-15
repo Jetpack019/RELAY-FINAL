@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -699,17 +700,23 @@ class _PlaceOrderState extends State<PlaceOrder> {
                             child: SizedBox(
                               child: MaterialButton(
                                 onPressed: () {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (context) => OrderProcess(),
-                                    ),
-                                  );
-                                  setState(() {
-                                    setYour_Location(orderYour_Location);
-                                    setTotal_getTotal_and_Delivery(
-                                        total_getTotal_and_Delivery);
-                                    setDelivery_Fee(priorityDelivery_value);
-                                  });
+                                  if (orderYour_Location == "") {
+                                    Fluttertoast.showToast(
+                                        msg:
+                                            "Select Your Location before you proceed");
+                                  } else {
+                                    Navigator.of(context).push(
+                                      MaterialPageRoute(
+                                        builder: (context) => OrderProcess(),
+                                      ),
+                                    );
+                                    setState(() {
+                                      setYour_Location(orderYour_Location);
+                                      setTotal_getTotal_and_Delivery(
+                                          total_getTotal_and_Delivery);
+                                      setDelivery_Fee(priorityDelivery_value);
+                                    });
+                                  }
                                 },
                                 height: 80,
                                 minWidth: MediaQuery.of(context).size.width,

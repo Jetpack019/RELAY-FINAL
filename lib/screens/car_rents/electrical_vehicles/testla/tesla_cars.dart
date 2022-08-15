@@ -4,7 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../car_rent_order_summary.dart';
-import '../tesla_vehicle.dart';
+import 'tesla_vehicle.dart';
 
 class Cars_Tesla extends StatefulWidget {
   Cars_Tesla({Key? key}) : super(key: key);

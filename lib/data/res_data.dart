@@ -67,7 +67,7 @@ const allfoodDeliver = [
     image: "assets/Food_Delivery/Sweet-Dessert/happy-lemon-logo.png",
   ),
   FoodDeliver(
-    restaurant: 'Pizza Hut',
+    restaurant: 'Pizza Hut 2',
     image: "assets/Food_Delivery/Pizza/pizza-hut-2.png",
   ),
   FoodDeliver(

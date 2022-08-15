@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
+import 'package:relay_finalize/screens/SeeMore/seeMore_Desserts/sweetDesserts.dart';
+import 'package:relay_finalize/screens/SeeMore/seeMore_Pizza/pizza_seeMore.dart';
+import 'package:relay_finalize/screens/SeeMore/seeMore_Restaurant/restaurants_seemore.dart';
 import '../../data/res_data.dart';
-import '../../route_restaurant/route_restaurant.dart';
+import '../../route_food_delivery/route_food_delivery.dart';
+
 import '../delivery/order_details.dart';
 
 class FoodDelivery extends StatefulWidget {
@@ -307,7 +311,14 @@ class _FoodDeliveryState extends State<FoodDelivery> {
                               Padding(
                                 padding: const EdgeInsets.all(10.0),
                                 child: GestureDetector(
-                                  onTap: () {},
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              SeeMoreRestaurants()),
+                                    );
+                                  },
                                   child: Image.asset(
                                     'assets/Car_Rent/See_more.png',
                                     width: 70,
@@ -511,7 +522,14 @@ class _FoodDeliveryState extends State<FoodDelivery> {
                               Padding(
                                 padding: const EdgeInsets.all(10.0),
                                 child: GestureDetector(
-                                  onTap: () {},
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              SeeMoreSweetDesserts()),
+                                    );
+                                  },
                                   child: Image.asset(
                                     'assets/Car_Rent/See_more.png',
                                     width: 70,
@@ -623,11 +641,20 @@ class _FoodDeliveryState extends State<FoodDelivery> {
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(10.0),
-                                child: Image.asset(
-                                  'assets/Car_Rent/See_more.png',
-                                  width: 70,
-                                  height: 70,
-                                  fit: BoxFit.contain,
+                                child: GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => SeeMorePizza()),
+                                    );
+                                  },
+                                  child: Image.asset(
+                                    'assets/Car_Rent/See_more.png',
+                                    width: 70,
+                                    height: 70,
+                                    fit: BoxFit.contain,
+                                  ),
                                 ),
                               ),
                             ],

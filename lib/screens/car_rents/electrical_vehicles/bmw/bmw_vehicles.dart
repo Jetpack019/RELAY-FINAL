@@ -1,23 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:relay_finalize/screens/car_rents/electrical_vehicles/testla/tesla_cars.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../home/home.dart';
-
-class Tesla_Vehicles extends StatefulWidget {
-  Tesla_Vehicles({Key? key}) : super(key: key);
+class BMWVehicles extends StatefulWidget {
+  BMWVehicles({Key? key}) : super(key: key);
 
   @override
-  State<Tesla_Vehicles> createState() => _Tesla_VehiclesState();
+  State<BMWVehicles> createState() => _BMWVehiclesState();
 }
 
-class _Tesla_VehiclesState extends State<Tesla_Vehicles> {
-  String rentsetTesla_Model = "";
-
-  String model_x = "Model X";
-  String model_3 = "Model 3";
-  String model_s = "Model S";
-
+class _BMWVehiclesState extends State<BMWVehicles> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,20 +20,14 @@ class _Tesla_VehiclesState extends State<Tesla_Vehicles> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               IconButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => HomeScreen(),
-                    ),
-                  );
-                },
+                onPressed: () {},
                 color: Colors.black,
                 icon: Icon(Icons.arrow_back),
               ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(10, 10, 0, 0),
                 child: Text(
-                  'Car Rental',
+                  'BMW Vehicles',
                   textAlign: TextAlign.start,
                   style: TextStyle(
                     fontFamily: 'Word Sans',
@@ -81,17 +65,10 @@ class _Tesla_VehiclesState extends State<Tesla_Vehicles> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 ListTile(
-                  onTap: () {
-                    rentsetTesla_Model = model_x;
-                    setTesla_Model(rentsetTesla_Model);
-
-                    Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => Cars_Tesla()),
-                    );
-                  },
+                  onTap: () {},
                   title: Expanded(
                     child: Text(
-                      'Model X',
+                      '',
                       style: TextStyle(),
                     ),
                   ),
@@ -107,16 +84,10 @@ class _Tesla_VehiclesState extends State<Tesla_Vehicles> {
                   color: Colors.black,
                 ),
                 ListTile(
-                  onTap: () {
-                    rentsetTesla_Model = model_3;
-                    setTesla_Model(rentsetTesla_Model);
-                    Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => Cars_Tesla()),
-                    );
-                  },
+                  onTap: () {},
                   title: Expanded(
                     child: Text(
-                      'Model 3',
+                      '',
                       style: TextStyle(),
                     ),
                   ),
@@ -132,16 +103,10 @@ class _Tesla_VehiclesState extends State<Tesla_Vehicles> {
                   color: Colors.black,
                 ),
                 ListTile(
-                  onTap: () {
-                    rentsetTesla_Model = model_s;
-                    setTesla_Model(rentsetTesla_Model);
-                    Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => Cars_Tesla()),
-                    );
-                  },
+                  onTap: () {},
                   title: Expanded(
                     child: Text(
-                      'Model S',
+                      '',
                       style: TextStyle(),
                     ),
                   ),
@@ -162,10 +127,5 @@ class _Tesla_VehiclesState extends State<Tesla_Vehicles> {
         ),
       ]),
     );
-  }
-
-  Future<void> setTesla_Model(orderGetTotal) async {
-    final SharedPreferences pref = await SharedPreferences.getInstance();
-    pref.setString('rentsetTesla_Model', rentsetTesla_Model);
   }
 }

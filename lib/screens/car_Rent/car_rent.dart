@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
+import 'package:relay_finalize/screens/SeeMore/seeMore_ElectricalVehicle/electricalvehicles_seemore.dart';
+import 'package:relay_finalize/screens/SeeMore/seeMore_StandardVehicle/standardvehicles_seemore.dart';
 import 'package:relay_finalize/screens/car_rents/car_rent_current_rent.dart';
 
 import '../../data/car_rent_data.dart';
@@ -207,8 +209,8 @@ class _CartRentScreentState extends State<CartRentScreent> {
                               onTap: () {
                                 Navigator.of(context).push(
                                   MaterialPageRoute(
-                                    builder: (context) =>
-                                        CarRentPage(cars: allCars.elementAt(0)),
+                                    builder: (context) => RouteCarRent(
+                                        carRent: allCars.elementAt(0)),
                                   ),
                                 );
                               },
@@ -236,7 +238,14 @@ class _CartRentScreentState extends State<CartRentScreent> {
                               ),
                             ),
                             GestureDetector(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          SeeMoreElectricalVehicles()),
+                                );
+                              },
                               child: Image.asset(
                                 'assets/Car_Rent/See_more.png',
                                 width: 80,
@@ -370,7 +379,14 @@ class _CartRentScreentState extends State<CartRentScreent> {
                               ),
                             ),
                             GestureDetector(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          SeeMoreStandardVehicles()),
+                                );
+                              },
                               child: Image.asset(
                                 'assets/Car_Rent/See_more.png',
                                 width: 80,

@@ -59,12 +59,14 @@ class _LoginPageState extends State<LoginPage> {
 
         //logout
         ActionChip(
+            backgroundColor: Colors.amber,
             avatar: Icon(Icons.logout),
             label: Text("Logout"),
             onPressed: () {
               Provider.of<LoginController>(context, listen: false).Logout();
             }),
         ActionChip(
+            backgroundColor: Colors.amber,
             avatar: Icon(Icons.forward),
             label: Text("Lets Proceed"),
             onPressed: () {

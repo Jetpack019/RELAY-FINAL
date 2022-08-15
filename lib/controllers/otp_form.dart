@@ -69,7 +69,7 @@ class _OTPFormState extends State<OTPForm> {
           children: [
             SizedBox(height: 40),
             Text(
-              'We have sent you the code for\n verification at your email',
+              'Enter Your Registered Email To Sent you the Code for\n Verification at your Email',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 20),
             ),
@@ -81,7 +81,8 @@ class _OTPFormState extends State<OTPForm> {
                   hintText: "Enter your registered email",
                   labelText: "Email",
                   suffixIcon: TextButton(
-                    child: Text("Send OTP"),
+                    child:
+                        Text("Send OTP", style: TextStyle(color: Colors.black)),
                     onPressed: () {
                       sendOTP();
                     },
@@ -115,8 +116,7 @@ class _OTPFormState extends State<OTPForm> {
                         filled: true,
                         hintText: "0",
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
-                              color: Color.fromARGB(255, 255, 238, 0)),
+                          borderSide: BorderSide(color: Colors.black),
                         ),
                         border: OutlineInputBorder(borderSide: BorderSide()),
                       ),
@@ -145,8 +145,7 @@ class _OTPFormState extends State<OTPForm> {
                         filled: true,
                         hintText: "0",
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
-                              color: Color.fromARGB(255, 255, 238, 0)),
+                          borderSide: BorderSide(color: Colors.black),
                         ),
                         border: OutlineInputBorder(borderSide: BorderSide()),
                       ),
@@ -175,8 +174,7 @@ class _OTPFormState extends State<OTPForm> {
                         filled: true,
                         hintText: "0",
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
-                              color: Color.fromARGB(255, 255, 238, 0)),
+                          borderSide: BorderSide(color: Colors.black),
                         ),
                         border: OutlineInputBorder(borderSide: BorderSide()),
                       ),
@@ -205,8 +203,7 @@ class _OTPFormState extends State<OTPForm> {
                         filled: true,
                         hintText: "0",
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
-                              color: Color.fromARGB(255, 255, 238, 0)),
+                          borderSide: BorderSide(color: Colors.black),
                         ),
                         border: OutlineInputBorder(borderSide: BorderSide()),
                       ),
@@ -235,8 +232,7 @@ class _OTPFormState extends State<OTPForm> {
                         filled: true,
                         hintText: "0",
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
-                              color: Color.fromARGB(255, 255, 238, 0)),
+                          borderSide: BorderSide(color: Colors.black),
                         ),
                         border: OutlineInputBorder(borderSide: BorderSide()),
                       ),
@@ -265,8 +261,7 @@ class _OTPFormState extends State<OTPForm> {
                         filled: true,
                         hintText: "0",
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
-                              color: Color.fromARGB(255, 255, 238, 0)),
+                          borderSide: BorderSide(color: Colors.black),
                         ),
                         border: OutlineInputBorder(borderSide: BorderSide()),
                       ),
@@ -288,11 +283,42 @@ class _OTPFormState extends State<OTPForm> {
               style: TextStyle(fontSize: 15),
             ),
             SizedBox(height: 10),
-            ElevatedButton(
-                onPressed: () {
-                  verifyOTP();
-                },
-                child: Text("Verify OTP")),
+            Padding(
+              padding: const EdgeInsets.only(left: 50, right: 50, top: 10),
+              child: Material(
+                elevation: 5,
+                borderRadius: BorderRadius.circular(20),
+                color: Colors.amberAccent,
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
+                  child: SizedBox(
+                    child: MaterialButton(
+                      onPressed: () {
+                        verifyOTP();
+                      },
+                      height: 60,
+                      minWidth: MediaQuery.of(context).size.width,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        // ignore: prefer_const_literals_to_create_immutables
+                        children: [
+                          Text(
+                            "Verify OTP",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontFamily: 'Word Sans',
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),

@@ -4,7 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../data/res_data.dart';
 import '../../../food_order/Family_Meals/8_pcs_CB_RJSD.dart';
-import '../../../route_restaurant/route_restaurant.dart';
+import '../../../route_food_delivery/route_food_delivery.dart';
 
 class Jollibee extends StatefulWidget {
   final FoodDeliver jollibee;

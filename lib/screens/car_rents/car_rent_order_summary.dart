@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'car_has_booked.dart';
-import 'electrical_vehicles/tesla_vehicle.dart';
+import 'electrical_vehicles/testla/tesla_vehicle.dart';
 import 'electrical_vehicles/testla/tesla_models.dart';
 import 'payment/scan_license.dart';
 

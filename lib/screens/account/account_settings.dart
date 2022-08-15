@@ -16,17 +16,12 @@ class _AccountSettingsState extends State<AccountSettings> {
       appBar: AppBar(
         backgroundColor: Colors.amber,
         automaticallyImplyLeading: false,
-        toolbarHeight: 180,
+        toolbarHeight: 150,
         flexibleSpace: Center(
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              IconButton(
-                onPressed: () {},
-                color: Colors.black,
-                icon: Icon(Icons.arrow_back),
-              ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(10, 10, 0, 0),
+              Center(
                 child: Text(
                   'Account Settings',
                   textAlign: TextAlign.start,
