@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -452,22 +453,34 @@ class _Cars_TeslaState extends State<Cars_Tesla> {
                                       dateTimepickUp.toString();
                                   rentsetTesla_Model_dropOff_datetime =
                                       dateTimedropOff.toString();
-                                  setTesla_Model_choose(
-                                      rentsetTesla_Model_choose);
-                                  setTesla_Model_pickUp(
-                                      rentsetTesla_Model_pickUp);
-                                  setTesla_Model_dropOff(
-                                      rentsetTesla_Model_dropOff);
-                                  setTesla_Model_pickUp_datetime(
-                                      rentsetTesla_Model_pickUp_datetime);
-                                  setTesla_Model_dropOff_datetime(
-                                      rentsetTesla_Model_dropOff_datetime);
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          Car_Rent_Order_Summary(),
-                                    ),
-                                  );
+
+                                  if (rentsetTesla_Model_pickUp == "" ||
+                                      rentsetTesla_Model_pickUp_datetime ==
+                                          "" ||
+                                      rentsetTesla_Model_dropOff == "" ||
+                                      rentsetTesla_Model_dropOff_datetime ==
+                                          "") {
+                                    Fluttertoast.showToast(
+                                        msg:
+                                            "Choose your order before you proceed");
+                                  } else {
+                                    setTesla_Model_choose(
+                                        rentsetTesla_Model_choose);
+                                    setTesla_Model_pickUp(
+                                        rentsetTesla_Model_pickUp);
+                                    setTesla_Model_dropOff(
+                                        rentsetTesla_Model_dropOff);
+                                    setTesla_Model_pickUp_datetime(
+                                        rentsetTesla_Model_pickUp_datetime);
+                                    setTesla_Model_dropOff_datetime(
+                                        rentsetTesla_Model_dropOff_datetime);
+                                    Navigator.of(context).push(
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            Car_Rent_Order_Summary(),
+                                      ),
+                                    );
+                                  }
                                 },
                                 height: 60,
                                 minWidth: MediaQuery.of(context).size.width,

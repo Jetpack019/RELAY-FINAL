@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_elegant_number_button/flutter_elegant_number_button.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -881,18 +882,27 @@ class _CB_RJSD_8pState extends State<CB_RJSD_8p> {
                   child: SizedBox(
                     child: MaterialButton(
                       onPressed: () async {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => PlaceOrder(),
-                          ),
-                        );
-                        setOrderName(pcs8_CB_RJSD);
-                        setCountOrder(_count);
-                        setFlavor(chicken_flavor_name);
-                        setDrinks(drinks_name);
-                        setExtras_1(extra_name_1);
-                        setExtras_2(extra_name_2);
-                        setGetTotal(total_adds);
+                        if (chicken_flavor_name == 'Chicken Flavor' ||
+                            drinks_name == 'Choice of Drinks' ||
+                            extra_name_1 == 'Extra Rice' ||
+                            extra_name_2 == 'Extra Chicken Joy Gravy' ||
+                            total_adds == 902) {
+                          Fluttertoast.showToast(
+                              msg: "Choose your order before you proceed");
+                        } else {
+                          setOrderName(pcs8_CB_RJSD);
+                          setCountOrder(_count);
+                          setFlavor(chicken_flavor_name);
+                          setDrinks(drinks_name);
+                          setExtras_1(extra_name_1);
+                          setExtras_2(extra_name_2);
+                          setGetTotal(total_adds);
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => PlaceOrder(),
+                            ),
+                          );
+                        }
                       },
                       height: 80,
                       minWidth: MediaQuery.of(context).size.width,

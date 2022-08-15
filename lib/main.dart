@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'package:flutter/services.dart';
+import 'package:relay_finalize/screens/start/start_login.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'controllers/login_controller.dart';
@@ -52,7 +53,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: showHome ? HomeScreen() : LoginScreen(),
+        home: showHome ? HomeScreen() : StartLogin(),
       ),
     );
   }

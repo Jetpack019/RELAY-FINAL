@@ -71,5 +71,21 @@
   		<string>sms</string>
   		<string>tel</string>
 	</array>
+	
+		<!-- Put me in the [my_project]/ios/Runner/Info.plist file -->
+	<!-- Google Sign-in Section -->
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<!-- TODO Replace this value: -->
+				<!-- Copied from GoogleService-Info.plist key REVERSED_CLIENT_ID -->
+				<string>com.googleusercontent.apps.302225887124-q76crre69mcqhg0kp2osi9vh4s0vo8fh</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>
